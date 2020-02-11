@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+type IStringOrHtmlElement = string | HTMLElement;
+
 interface IDialogPropTypes {
   className?: string;
   style?: {};
@@ -25,6 +27,8 @@ interface IDialogPropTypes {
   zIndex?: number;
   maskProps?: any;
   wrapProps?: any;
+  getContainer?: IStringOrHtmlElement | (() => IStringOrHtmlElement);
+  forceRender?: boolean;
 }
 
 export default IDialogPropTypes;

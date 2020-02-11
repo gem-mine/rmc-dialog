@@ -83,6 +83,7 @@ export default class Dialog extends React.Component<IDialogPropTypes, any> {
           className={`${props.prefixCls}-mask`}
           hiddenClassName={`${props.prefixCls}-mask-hidden`}
           visible={props.visible}
+          forceRender={props.forceRender}
           {...props.maskProps}
         />
       );
@@ -214,6 +215,9 @@ export default class Dialog extends React.Component<IDialogPropTypes, any> {
     const style = this.getWrapStyle();
     if (props.visible) {
       style.display = null;
+    }
+    if (!props.visible && props.forceRender) {
+      style.display = 'none';
     }
     return (
       <div>

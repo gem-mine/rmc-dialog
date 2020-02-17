@@ -42,12 +42,14 @@ class MyControl extends React.Component<any, any> {
       visible2: true,
     });
   }
+
   render() {
     let dialog;
     let wrapClassName = '';
     if (this.state.center) {
       wrapClassName = 'center';
     }
+    const container = document.getElementById('qrcode') || undefined;
     // if (!this.state.visible) {
       // dialog = null;
     // } else {
@@ -56,6 +58,8 @@ class MyControl extends React.Component<any, any> {
         ref={(dom: any) => this.dialog = dom}
         visible={this.state.visible}
         wrapClassName={wrapClassName}
+        forceRender
+        getContainer={container}
         animation="zoom"
         maskAnimation="fade"
         onClose={this.onClose}
@@ -113,6 +117,7 @@ class MyControl extends React.Component<any, any> {
         </p>
         {dialog}
         {dialog2}
+        <div id="test"></div>
       </div>
     );
   }

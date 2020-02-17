@@ -36,24 +36,18 @@
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "compile": "rc-tools run compile --babel-runtime",
-    "prepublish": "rc-tools run guard",
-    "prepare": "rc-tools run guard",
-    "prepublishOnly": "rc-tools run guard",
     "pub": "rc-tools run pub --babel-runtime",
     "lint": "rc-tools run lint --no-js-lint",
     "karma": "rc-test run karma",
     "saucelabs": "rc-test run saucelabs",
     "test": "rc-test run test",
     "chrome-test": "rc-test run chrome-test",
-    "coverage": "rc-test run coverage",
-    "rn-start": "node node_modules/react-native/local-cli/cli.js start",
-    "rn-init": "rc-tools run react-native-init"
+    "coverage": "rc-test run coverage"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
-    "@types/react": "~16.0.2",
-    "@types/react-dom": "15.5.1",
-    "@types/react-native": "^0.47.2",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
     "async": "^0.9.0",
     "bluebird": "~2.9.30",
     "bootstrap": "^3.3.6",
@@ -62,10 +56,8 @@
     "pre-commit": "1.x",
     "rc-test": "^6.0.1",
     "rc-tools": "6.x",
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "react-native": "~0.42.0",
-    "react-native-index-page": "~0.2.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "pre-commit": [
     "lint"
@@ -73,6 +65,7 @@
   "typings": "./lib/DialogWrap.d.ts",
   "dependencies": {
     "babel-runtime": "6.x",
-    "rc-animate": "2.x"
+    "rc-animate": "2.x",
+    "rc-util": "^4.19.0"
   }
 }
